@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-  
+
   newAuth: function() {
     var fb = this.store.get('firebaseRoot');
-    return new Em.RSVP.Promise(function(resolve, reject) {
+    return new Ember.RSVP.Promise(function(resolve, reject) {
       fb.authAnonymously(function(error, auth) {
         if (error) {
           reject(error);
@@ -14,9 +14,9 @@ export default Ember.Mixin.create({
       });
     });
   },
-  
+
   getAuth: function() {
     return this.store.get('firebaseRoot').getAuth();
   }
-  
+
 });

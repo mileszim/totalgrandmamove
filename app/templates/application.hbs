@@ -3,20 +3,23 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div {{bind-attr class="showSubmitMoveButton:col-md-8:col-md-12"}}>
       {{outlet}}
     </div>
-    
+
+    {{#if showSubmitMoveButton}}
     <div class="col-md-4">
       {{#link-to 'moves.new' class='btn btn-warning btn-lg btn-block'}}
       <span class="glyphicon glyphicon-plus"></span> Submit TGM
       {{/link-to}}
     </div>
+    {{/if}}
+
   </div>
-  
+
   <hr>
 
   <footer>
-    <p>&copy; Total Grandma Move 2014</p>
+    <p>&#169; 2015 <a href="https://github.com/mileszim">Miles Zimmerman</a></p>
   </footer>
 </div>

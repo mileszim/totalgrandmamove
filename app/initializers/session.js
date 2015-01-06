@@ -1,6 +1,4 @@
-import Ember from 'ember';
-
-export function initialize(container, application) {
+export function initialize(container) {
   var session = container.lookup('controller:session');
   if (session.get('exists')) {
     session.send('login');
