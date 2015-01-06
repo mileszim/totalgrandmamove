@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    
+    {{#if showLogo}}<img src='/assets/img/grandmother.png' class='img-responsive pull-left' width='34' style='height:42px;margin-top:9px;margin-right:10px;'>{{/if}}
+    
+    {{link-to title 'application' class="navbar-brand"}}
+  </div>
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      {{#each}}
+        {{#link-to location tagName='li' href=false}}
+          {{link-to title location}}
+        {{/link-to}}
+      {{/each}}
+    </ul>
+
+  </div>
+</div>

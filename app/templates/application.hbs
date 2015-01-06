@@ -1,0 +1,22 @@
+{{render 'navigation'}}
+{{render 'jumbo'}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      {{outlet}}
+    </div>
+    
+    <div class="col-md-4">
+      {{#link-to 'moves.new' class='btn btn-warning btn-lg btn-block'}}
+      <span class="glyphicon glyphicon-plus"></span> Submit TGM
+      {{/link-to}}
+    </div>
+  </div>
+  
+  <hr>
+
+  <footer>
+    <p>&copy; Total Grandma Move 2014</p>
+  </footer>
+</div>
